@@ -6,6 +6,7 @@
   },
   "private": true,
   "scripts": {
+    
     "start": "npm run prod",
     "build": "npm-run-all clean transpile",
     "server": "node ./dist-server/bin/www.js",

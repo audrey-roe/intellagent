@@ -7,6 +7,12 @@ import {Transition} from '@headlessui/react';
 import NotificationsPanel from './NotificationsPanel';
 
 function UserMenu({toggleSidebar}) {
+    const backgroundColor = 'rgb(192, 210, 249)'; // Add the alpha value if needed
+
+    const divStyle = {
+      backgroundColor: backgroundColor,
+      // Other styles if needed
+    };
     const [userMenu, setUserMenu] = useState(false);
     const [notificationsPanel, setNotificationsPanel] = useState(false);
     const {user} = useSelector(state => state.auth);
@@ -33,10 +39,10 @@ function UserMenu({toggleSidebar}) {
                                 toggleNotificationsPanel={toggleNotificationsPanel}
                                 setNotificationsPanel={setNotificationsPanel}
                             />
-                            <button type="button"
+                            <button style={divStyle} type="button"
                                     onBlur={() => setUserMenu(false)}
                                     onClick={toggleUserMenu}
-                                    className={`${userMenu ? 'bg-gray-50' : 'hover:bg-gray-50'} inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 -my-1 bg-white text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-400`}
+                                    className={`${userMenu ? 'bg-pastelBlue-300' : 'hover:bg-gray-50'} inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 -my-1 bg-white text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-400`}
                                     id="options-menu" aria-haspopup="true" aria-expanded="true">
                                 <img className="h-8 w-8 rounded-full mr-4"
                                      src={user.photo}

@@ -22,7 +22,7 @@ function Tickets() {
     const toggleSidebar = () => setSidebar(!sidebar);
 
     return (
-        <div className="h-screen flex overflow-hidden bg-white">
+        <div className="h-screen flex overflow-hidden bg-black">
             {isLoggedIn &&
             <React.Fragment>
                 <Sidebar
@@ -36,7 +36,7 @@ function Tickets() {
                         <div className="px-4 py-3 w-full space-y-6">
                             <div className="border-b border-gray-200">
                                 <div>
-                                    <h1 className="text-xl leading-6 font-medium text-gray-900">
+                                    <h1 className="text-xl leading-6 font-medium text-gray-300">
                                         Tickets
                                     </h1>
                                     <TicketFilter/>
@@ -45,7 +45,7 @@ function Tickets() {
                             <div className="flex justify-between items-center">
                                 <div>
                                     <label htmlFor="search" className="sr-only">Search</label>
-                                    <div className="relative rounded-md">
+                                    <div className="bg-black relative rounded-md">
                                         <div
                                             className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                             <svg className="h-5 w-5 text-gray-400"

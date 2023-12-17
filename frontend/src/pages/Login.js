@@ -57,17 +57,17 @@ function Login() {
                 <div className="py-8 px-4 sm:px-10 shadow rounded-lg bg-white">
                     <img src={logo}
                          className="mx-auto h-16 w-auto"
-                         alt="Intellagent"/>
+                         alt="Dot"/>
                     <div className="my-8">
                         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
                             Log in to your account
                         </h2>
-                        <p className="mt-2 text-center text-sm text-gray-600 max-w">
+                        {/* <p className="mt-2 text-center text-sm text-gray-600 max-w">
                             Or <NavLink to="/" className="font-medium text-blue-500 hover:text-blue-600">start your
                             14-day
                             free
                             trial</NavLink>
-                        </p>
+                        </p> */}
                     </div>
                     <form ref={loginForm} className="space-y-6" action="#" method="POST">
                         <div>

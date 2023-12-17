@@ -49,7 +49,7 @@ function TicketTable() {
                 </th>
             </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-black divide-y divide-gray-200">
             {filteredTickets.length > 0 ?
                 filteredTickets.map(ticket => {
                     return (
@@ -62,7 +62,7 @@ function TicketTable() {
                 <tr>
                     <td className="px-6 py-4 whitespace-nowrap" colSpan="6">
                         <div
-                            className="text-sm text-gray-500">
+                            className="text-sm text-gray-200">
                             No tickets.
                         </div>
                     </td>

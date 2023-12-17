@@ -25,7 +25,7 @@ function TicketItem({ticket}) {
             </td>
             <td className="px-6 py-4 whitespace-nowrap cursor-pointer"
                 onClick={() => history.push(`/tickets/${ticket.reference}`)}>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-200">
                     {ticket.reference}
                 </p>
             </td>
@@ -41,14 +41,14 @@ function TicketItem({ticket}) {
                             className="text-sm font-medium text-gray-900">
                             {ticket.customer.name}
                         </p>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-gray-200">
                             @{ticket.customer.twitter_screen_name}
                         </p>
                     </div>
                 </div>
             </td>
             <td className="px-6 py-4 whitespace-nowrap">
-                <p className="text-sm text-gray-500 capitalize">
+                <p className="text-sm text-gray-200 capitalize">
                     {ticket.issue_type.name}
                 </p>
             </td>
@@ -61,14 +61,14 @@ function TicketItem({ticket}) {
                     {ticket.messages[ticket.messages.length - 1].body}
                 </p>
             </td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                <p className="text-sm text-gray-500">
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-200">
+                <p className="text-sm text-gray-200">
                     <Datetime
                         date={ticket.created_at}/>
                 </p>
             </td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                <p className="text-sm text-gray-500">
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-200">
+                <p className="text-sm text-gray-200">
                     <Datetime
                         date={ticket.updated_at}/>
                 </p>

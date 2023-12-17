@@ -1,4 +1,4 @@
-import path from 'path';
+const path = require('path')
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'development') {
     app.use(logger('dev'));
 }
 
-require("./twitter/webhooks");
+// require("./twitter/webhooks");
 
 app.use(express.json());
 app.use(cors());

@@ -14,7 +14,7 @@ function TicketFilter() {
                     <button key={index} type="button"
                             className={`${status === filter
                                 ? 'border-blue-500 text-blue-600'
-                                : 'hover:text-gray-700 hover:border-gray-300'} border-transparent text-gray-500 focus:outline-none whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm capitalize`}
+                                : 'hover:text-gray-700 hover:border-gray-300'} border-transparent text-gray-200 focus:outline-none whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm capitalize`}
                             onClick={() => dispatch(actions.tickets.setTicketFilter(status))}>
                         {status}
                     </button>

@@ -13,7 +13,7 @@ function notFound() {
 };
 
 function unauthorised() {
-    return function (err, req, res, next) {
+    return function ( err, req, res, next) {
         if (err.name === 'UnauthorizedError') {
             return res.status(401).send({error: 'Unauthorised'});
         }
@@ -21,7 +21,7 @@ function unauthorised() {
     }
 }
 
-// route guard, all routes except POST /auth require valid bearer token in header
+// route guard, all routes except POST /auth require valid beare∫r token in header
 function routeGuard() {
     return jwt({
         secret: PUB_KEY,

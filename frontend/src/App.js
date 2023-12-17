@@ -4,7 +4,7 @@ import {Switch, Route, useLocation} from 'react-router-dom';
 
 import actions from './redux/actions';
 
-import {Landing, Login, Dashboard, Tickets, Ticket} from './pages';
+import {Landing, Login, Dashboard, Tickets, Ticket, Chat} from './pages';
 import {EventBus, NotificationList} from './components';
 
 function App() {
@@ -54,6 +54,7 @@ function App() {
                 <Route exact path='/dashboard' component={Dashboard}/>
                 <Route exact path='/tickets' component={Tickets}/>
                 <Route exact path='/tickets/:reference' component={Ticket}/>
+                <Route exact path='/chat' component={Chat}/>
             </Switch>
         </div>
     );

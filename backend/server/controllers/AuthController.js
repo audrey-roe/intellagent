@@ -5,12 +5,14 @@ exports.login = async (req, res) => {
     try {
         const {email, password} = req.body;
 
+
         const user = await User.findByEmail(email);
         const isPasswordValid = validatePassword(password, user.hash, user.salt);
 
         if (isPasswordValid) {
-            const {token} = issueJwt(user);
 
+            const {token} = issueJwt(user);
+            console.log('token')
             if (token) {
                 const {_id, name, email, phone, photo, team} = user;
                 return res.status(200).send({_id, name, email, phone, photo, team, token});
