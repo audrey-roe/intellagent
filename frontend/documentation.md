@@ -9,7 +9,9 @@ run this in the terminal
 then run
 
     npm run build
+
 then serve the build with 
+
     serve -s build
 
 ** if there are unknown errors, try removing the nodemodules and the package lock files
